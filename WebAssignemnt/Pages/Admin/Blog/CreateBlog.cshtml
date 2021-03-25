@@ -25,6 +25,14 @@
 
     <div>
         <p>
+            <label asp-for="Blog.Content"> Content</label>
+            <input type="text" asp-for="Blog.Content" />
+            <span asp-validation-for="Blog.Content"></span>
+        </p>
+    </div>
+
+    <div>
+        <p>
             <label asp-for="Blog.Author">   </label>
             <select asp-for="Blog.Author" asp-items="Model.AuthorList"></select>
             <span asp-validation-for="Blog.Author"></span>
