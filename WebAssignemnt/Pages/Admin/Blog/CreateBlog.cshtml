@@ -1,0 +1,59 @@
+﻿@page
+@model WebAssignemnt.Pages.Admin.Blog.CreateBlogModel
+@{
+}
+
+
+
+<form method="post">
+
+    <div>
+        <p>
+            <label asp-for="Blog.Title">Title</label>
+            <input type="text" asp-for="Blog.Title" />
+            <span asp-validation-for="Blog.Title"></span>
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <label asp-for="Blog.Content"> Content</label>
+            <input type="text" asp-for="Blog.Content" />
+            <span asp-validation-for="Blog.Content"></span>
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <label asp-for="Blog.Author">   </label>
+            <select asp-for="Blog.Author" asp-items="Model.AuthorList"></select>
+            <span asp-validation-for="Blog.Author"></span>
+        </p>
+    </div>
+
+
+
+    <div>
+        <p>
+            <label asp-for="Blog.PublishDate"></label>
+            <input type="date" asp-for="Blog.PublishDate" />
+            <span asp-validation-for="Blog.PublishDate"></span>
+        </p>
+    </div>
+
+
+
+    <p> <button type="submit"> Submit </button> </p>
+
+</form>
+
+<div asp-validation-summary="All"> </div>
+
+
+@section Scripts
+{
+
+    <script src="/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
