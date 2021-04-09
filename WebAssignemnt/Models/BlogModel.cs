@@ -1,10 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebAssignemnt.Models
 {
     public class BlogModel
     {
+        [Key]
+        [HiddenInput]
+        public int  BlogID { get; set; }
+
 
         [Required(ErrorMessage = "Please enter title.")]
         [MinLength(2, ErrorMessage = "Title should be atleast 2 characters.")]
