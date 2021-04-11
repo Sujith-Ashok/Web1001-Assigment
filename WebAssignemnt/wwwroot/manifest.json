@@ -3,7 +3,7 @@
   "short_name": "Web Assignment",
   "start_url": "/",
   "Scope": "/",
-  "display": "minimal-ui",
+  "display": "Standalone",
   "icons": [
     {
       "sizes": "192x192",

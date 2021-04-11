@@ -10,6 +10,9 @@
     <Folder Include="Pages\Admin\Author\" />
     <Folder Include="Pages\Admin\Blog\" />
     <Folder Include="Context\" />
+    <Folder Include="Pages\CRUD\" />
+    <Folder Include="Pages\CRUD\Author\" />
+    <Folder Include="Pages\CRUD\BlogPost\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
@@ -22,5 +25,15 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\Admin\AuthorCRUD\Details.cshtml" />
+    <Content Remove="Pages\Admin\AuthorCRUD\Edit.cshtml" />
+    <Content Remove="Pages\Admin\AuthorCRUD\Index.cshtml" />
+    <Content Remove="Pages\CRUD\Author\Details.cshtml" />
+    <Content Remove="Pages\CRUD\Author\Edit.cshtml" />
+    <Content Remove="Pages\CRUD\Author\Index.cshtml" />
   </ItemGroup>
 </Project>
