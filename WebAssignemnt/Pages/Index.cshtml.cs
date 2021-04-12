@@ -14,15 +14,22 @@ namespace WebAssignemnt.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly DataContext _context;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, DataContext context)
         {
             _logger = logger;
+            _context = context;
         }
+
+
+        public ICollection<Models.BlogModel> homePagePost;
+        public ICollection<Models.BlogModel> Reverse;
 
         public void OnGet()
         {
-
+            homePagePost = _context.Blogs.Take(5).ToList();
+            
         }
     }
 }

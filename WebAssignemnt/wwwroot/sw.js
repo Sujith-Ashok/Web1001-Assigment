@@ -1,5 +1,6 @@
-﻿var CACHE_NAME = 'Sujith web application cache';
-var urlsToCache = [
+﻿const CACHE_NAME = 'Sujith web application cache';
+//const CACHE_Secondary = 'Sujith web application cache second';
+let urlsToCache = [
     '/'
 ];
 
@@ -22,10 +23,16 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request)
             .then(function (response) {
-                // Cache hit - return response
+                
                 if (response) {
                     return response;
                 }
+
+                //const newResponse = fetch(event.request);
+                //caches.open(CACHE_Secondary).then((cache) => {
+                //    cache.add(event.request);
+                //});
+
                 return fetch(event.request);
             }
             )

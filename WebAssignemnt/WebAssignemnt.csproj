@@ -11,8 +11,8 @@
     <Folder Include="Pages\Admin\Blog\" />
     <Folder Include="Context\" />
     <Folder Include="Pages\CRUD\" />
-    <Folder Include="Pages\CRUD\Author\" />
     <Folder Include="Pages\CRUD\BlogPost\" />
+    <Folder Include="Pages\Author\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />

@@ -1,0 +1,66 @@
+﻿@page
+@model WebAssignemnt.Pages.BlogPostModel
+@{
+}
+
+
+<div class="text-center">
+    <h3 class="display-4">Welcome</h3>
+    <hr />
+
+    
+    <br />
+
+
+    <h4> Please use route directive id to view the blog post </h4>
+    <br />
+
+
+    @if (Model.DisplayPost != null)
+    {
+        <div>
+            <table Border="2">
+                <tr>
+                    <td> <Strong>ID:</Strong> </td>
+                    <td>
+                        <p>@Model.DisplayPost.BlogID</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <Strong>Title:</Strong> </td>
+                    <td>
+                        <p>@Model.DisplayPost.Title</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <Strong>Author:</Strong> </td>
+                    <td>
+                        <p>@Model.DisplayPost.Author</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <Strong>Blog Content:</Strong> </td>
+                    <td>
+                        <p>@Model.DisplayPost.Content</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+
+    @*<br />
+        <br />
+        <br />
+        <br />
+        <p> <a href="Index"> <input type="button" value="Home Page"> </a>  </p>
+        <br />
+
+        <p> <a href="/Admin/Author/CreateAuthor"> <input type="button" value="Click here for Author Page"> </a>  </p>
+        <br />
+
+        <p> <a href="/Admin/Blog/CreateBlog"> <input type="button" value="Click here for Blog Page"> </a>  </p>*@
+
+
+
+
+</div>
