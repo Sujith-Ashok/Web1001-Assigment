@@ -1,7 +1,10 @@
 ﻿const CACHE_NAME = 'Sujith web application cache';
 //const CACHE_Secondary = 'Sujith web application cache second';
 let urlsToCache = [
-    '/'
+    '/',
+    '/css/site.css',
+    '/js/site.js'
+
 ];
 
 self.addEventListener('install', function (event) {
@@ -30,7 +33,7 @@ self.addEventListener('fetch', function (event) {
 
                 //const newResponse = fetch(event.request);
                 //caches.open(CACHE_Secondary).then((cache) => {
-                //    cache.add(event.request);
+                //   // cache.add(event.request);
                 //});
 
                 return fetch(event.request);
