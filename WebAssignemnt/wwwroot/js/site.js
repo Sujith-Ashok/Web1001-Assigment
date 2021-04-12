@@ -44,3 +44,35 @@ if ('caches' in window) {
 
     buttonOff.removeAttr('hidden');
 }
+
+
+function share() {
+    if (!("share" in navigator)) {
+        alert('Inter app sharing API not supportedin this browser.');
+        return;
+    }
+
+    navigator.share({
+        title: 'Sujith Web Assignment',
+        text: 'Hey read these nice blog post',
+        url: '/'
+    })
+        .then(() => console.log('Successful share'))
+        .catch(error => console.log('Error sharing:', error));
+}
+
+
+//function intent() {
+//    if (!("Intent" in window)) {
+//        alert('Web Intents API not supported.');
+//        return;
+//    }
+
+//    var intent = new Intent('http://webintents.org/share',
+//        'text/uri-list',
+//        'https://whatwebcando.today');
+//    navigator.startActivity(intent, function () {
+//        console.log('Successful share')
+//    }, function (error) {
+//        console.log('Error sharing:', error);
+//    });

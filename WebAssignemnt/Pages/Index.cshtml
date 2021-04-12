@@ -6,11 +6,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome To Author Blog</h1>
+    <h1 class="display-4">Welcome To Blog website</h1>
     <hr />
     <p> <a href="/CRUD/BlogPost/create"> <input type="button" value="Click here to add Blog Post"> </a>  </p>
 
-
+    <button onclick="share()">Share the blogs with you friends</button>
+    <br />
+    <br />
     <h5>Last 5 Blog posts</h5>
     <br />
     <br />
@@ -19,34 +21,32 @@
     {
 
 
-            <dl class="row">
-                <dt class="col-sm-2">
-                    <Strong>ID:</Strong>
-                </dt>
-                <dd class="col-sm-10">
-                    @homePageBlog.BlogID
-                </dd>
-                <dt class="col-sm-2">
-                    Title:
-                </dt>
-                <dd class="col-sm-10">
-                    @homePageBlog.Title
-                </dd>
-                <dt class="col-sm-2">
-                    Author:
-                </dt>
-                <dd class="col-sm-10">
-                    @homePageBlog.Author
-                </dd>
-                <dt class="col-sm-2">
-                    Blog Content:
-                </dt>
-                <dd class="col-sm-10">
-                    @homePageBlog.Content
-                </dd>
-            </dl>
-
-    }
+<dl class="row">
+    <dt class="col-sm-2">
+        <Strong>ID:</Strong>
+    </dt>
+    <dd class="col-sm-10">
+        @homePageBlog.BlogID
+    </dd>
+    <dt class="col-sm-2">
+        Title:
+    </dt>
+    <dd class="col-sm-10">
+        @homePageBlog.Title
+    </dd>
+    <dt class="col-sm-2">
+        Author:
+    </dt>
+    <dd class="col-sm-10">
+        @homePageBlog.Author
+    </dd>
+    <dt class="col-sm-2">
+        Blog Content:
+    </dt>
+    <dd class="col-sm-10">
+        @homePageBlog.Content
+    </dd>
+</dl>}
 
 
 </div>
